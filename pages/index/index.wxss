@@ -1,23 +1,22 @@
 /**index.wxss**/
 .userInfo{
-  width: 100%;
+  width: 90%;
   padding: 0 10px;
   height: 70px;
   /* background: red; */
-  margin-top:16px;
+  margin:16px auto 0;
   font-size: 14px;
-  /* border-bottom: 1px solid #000; */
 }
 .userInfo .avatar,.content,.edit{
   float: left;
 }
 .userInfo .avatar{
-  width: 80px;
+  width: 20%;
   text-align: center;
 }
 /*userInfo content  */
 .userInfo .content{
-  width: 215px;
+  width: 60%;
 }
 .userInfo .content .left,.right{
   width: 50%;
@@ -25,7 +24,13 @@
 }
 
 .userInfo .edit{
-  width: 80px;
+  width: 20%;
+}
+/*公告  */
+.userInfo .announcement{
+  clear: both;
+  border-top:1px solid #000;
+  padding-top: 10px;
 }
 .userInfo .avatar image{
   width: 40px;

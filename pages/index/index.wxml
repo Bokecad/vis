@@ -20,11 +20,11 @@
     </view>
     <!--right  -->
     <view class="edit">
-      right
+      <button type="primary">兑换</button>
     </view>
     <!--公告  -->
     <view class="announcement">
-  
+      aa
     </view>
   </view>
   
