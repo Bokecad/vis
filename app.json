@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/history/history",
+    "pages/my/my"
+  ],
+  "window": {
+    "navigationBarTitleText": "员工端"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "工作任务",
+        "iconPath": "./asset/job.png",
+        "selectedIconPath": "./asset/job_s.png"
+      },
+      {
+        "pagePath": "pages/history/history",
+        "text": "历史任务",
+        "iconPath": "./asset/history.png",
+        "selectedIconPath": "./asset/history_s.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "./asset/user.png",
+        "selectedIconPath": "./asset/user_s.png"
+
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

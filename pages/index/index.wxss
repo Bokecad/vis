@@ -1,0 +1,35 @@
+/**index.wxss**/
+.userInfo{
+  width: 100%;
+  padding: 0 10px;
+  height: 70px;
+  /* background: red; */
+  margin-top:16px;
+  font-size: 14px;
+  /* border-bottom: 1px solid #000; */
+}
+.userInfo .avatar,.content,.edit{
+  float: left;
+}
+.userInfo .avatar{
+  width: 80px;
+  text-align: center;
+}
+/*userInfo content  */
+.userInfo .content{
+  width: 215px;
+}
+.userInfo .content .left,.right{
+  width: 50%;
+  float: left;
+}
+
+.userInfo .edit{
+  width: 80px;
+}
+.userInfo .avatar image{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  
+}
