@@ -1,0 +1,89 @@
+<!--consump.wxml-->
+<view class="consump">
+  <!-- 1.借用物品 -->
+  <view  class="consumpTil green" wx:if="{{status == 1}}">
+    借用物品
+    <view class="fr fz20">10月1日（今天）08：30退房</view>
+  </view>
+  <!-- 2.查房查看 -->
+  <view  class="consumpTil purple" wx:if="{{status == 2}}">
+    查房查看
+    <view class="fr fz20">10月1日（今天）08：30退房</view>
+  </view>
+  <!--3预约扫房  -->
+  <view  class="consumpTil cyan" wx:if="{{status == 3}}">
+    预约扫房
+  </view>
+  <!--4预约查房  -->
+  <view  class="consumpTil darkGray" wx:if="{{status == 4}}">
+    预约查房
+  </view>
+<!--***************************  -->
+  <view class="consumpBody">
+  
+  <!--基本信息  -->
+  <view class='userContent'>
+    <view>房号：</view>
+    <view>姓名：</view>
+  </view>
+<!--***************************  -->
+  <!-- 时间 -->
+    <view class='userContent'>
+      <view>
+        提交时间：
+      </view>
+    </view>
+<!--***************************  -->
+    <!-- 物品清单 -->
+    <view>
+      <view>
+        物品清单
+        <view class="f_yellow fr">
+          <image href="javasript:;" 
+          src="../../asset/notice1.png" 
+          style="height:30rpx;width:30rpx"></image>
+          听语音播报
+      </view>
+      </view>
+      <view class="flex-wrp alignCenter">
+        <view class="flex-item flex ">
+          物品
+        </view>
+        <view class="flex-item flex">
+          数量
+        </view>
+        <view class="flex-item flex">
+          操作
+        </view>
+      </view>
+      <view>
+        <view class="flex-wrp  inventory alignCenter">
+          <view class="flex-item flex ">
+            物品
+          </view>
+          <view class="flex-item flex">
+            <view class="reduce">-</view>
+            <input class="countIpt"></input>
+            <view class="reduce">+</view>
+            
+          </view>
+          <view class="flex-item flex">
+              <button type="warn" 
+              class="buttonFontsize fz20"
+              style="width:50%;"
+              >删除</button>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='userContent'>
+    <button class='buttonFontsize yellowBtn' wx:if="{{status == 1}}">接受</button>
+    <button class='buttonFontsize yellowBtn' wx:if="{{status == 2}}">接受</button>
+    <!--3.退房查看  -->
+     <button class='buttonFontsize yellowBtn' wx:if="{{status == 3}}">确认</button> 
+  </view>
+
+
+
+</view>

@@ -1,4 +1,7 @@
 /**app.wxss**/
+page{
+  font-size: 30rpx;
+}
 .container {
   height: 100%;
   display: flex;
@@ -9,3 +12,93 @@
   box-sizing: border-box;
   font-size: 14px;
 } 
+/* 按钮字体初始化 */
+.buttonFontsize{
+  font-size: 30rpx;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.clearfix:after { content:""; display:block; height:0; visibility:hidden; clear:both; }
+.hrSolid{
+ border-bottom:1px solid #ff0000;
+}
+
+
+.inlineBlock{
+  display: inline-block;
+}
+.colorRed{
+  color: #ff0000;
+}
+
+/* 弹性盒子 */
+
+.flex-wrp{
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.alignCenter{
+  text-align: center;
+}
+
+
+.fz20{font-size: 20rpx;}
+.fz24{font-size: 24rpx;}
+/*颜色  */
+
+/* 绿色 */
+.green{
+  background: #465d43;
+}
+/* 红色 */
+.red{
+  background: #ff0000;
+}
+/* 蓝色 */
+.blue{
+  background: #385ce0;
+}
+/* 青色 */
+.cyan{
+  background: #108ee9;
+}
+/* 紫色 */
+.purple{
+  background:#653565;
+}
+/* 深灰色 */
+.darkGray{
+  background:#27323b;
+}
+
+
+
+
+
+.f_yellow{
+  color:#ff9900;
+}
+
+
+.yellowBtn{
+  background:#ff9900;
+  color:#fff;
+}
+.grayFont{
+  color:#666;
+}
+
+
+
+
+
+
+
+

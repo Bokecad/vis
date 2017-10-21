@@ -1,36 +1,193 @@
 <!--index.wxml-->
 <view class="home">
   <!--用户信息展示  -->
-  <view class="userInfo">
-    <!--头像  -->
-    <view class="avatar">
-      <image src='{{userInfo.avatarUrl}}'></image>
-    </view>
-    <!--用户信息  -->
-    <view class="content">
-      <view class="left">
-        <view>姓名：</view>
-        <view>工号：</view>
-        <view>部门：</view>
+  <view class="homeContent">
+    <view class='userInfo hrSolid'>
+      <view class='clearfix'>
+        <!--头像  -->
+        <view class="avatar">
+          <image src='{{userInfo.avatarUrl}}'></image>
+        </view>
+        <!--用户信息  -->
+        <view class="content">
+          <view class="left">
+            <view>姓名：</view>
+            <view>工号：</view>
+            <view>部门：</view>
+          </view>
+          <view class="right">
+            <view>当前积分：</view>
+            <view>当前班次：</view>
+          </view>
+        </view>
+        <!--right  -->
+        <view class="edit">
+          <button type="primary" class='fz24'>兑换</button>
+        </view>
       </view>
-      <view class="right">
-        <view>当前积分：</view>
-        <view>当前班次：</view>
-      </view>
-    </view>
-    <!--right  -->
-    <view class="edit">
-      right
     </view>
     <!--公告  -->
     <view class="announcement">
-  
-  
-    </view>
-  </view>
-  
+      <view class="clearfix">
+        <view class="flex-wrp">
+          <view class="flex-item announcementLeft">
+            <image href="javasript:;" 
+            src="../../asset/notice1.png" 
+            style="height:50rpx;width:50rpx"></image>
+            <view>公告</view>
+          </view>
+          <view class="flex-item announcementRight fz24 grayFont">
+          今天有重要客人入888住房，前厅部注意笑容迎接，尽快为客人办理入住手续。
+          </view>
+        </view>
 
-  <!--操作  -->
-  <view class="operating">
+      </view>
+    </view>
+<!--***************前厅部**********************  -->
+    <!--操作  -->
+    <!-- <view class="operating">
+        <view class="clearfix operatingTop">
+          <view class='fl operatingLeft blue'>
+            预约退房
+          </view>
+          <view class='fl operatingCenter grayFont'>
+          共计20条未处理
+          </view>
+          <view class='fr operatingRight'>
+            <image href="javasript:;" 
+            src="../../asset/arrow.png" 
+            style="height:40rpx;width:40rpx"></image>
+          </view>
+        </view>
+        <view class="operatingDow">
+          <view class="clearfix operatingDowList">
+            <view class="fl width25">
+              6666
+            </view>
+            <view class="fl">
+              完成
+            </view>
+            <view class="fl">
+              <view class='colorRed'>有消费</view>
+            </view>
+            <view class="fr">
+                <button class="buttonFontsize yellowBtn fz20"
+                bindtap="lookDetail"
+                >查看</button>
+            </view>
+            <view class="fr downCenter grayFont">
+              3分钟前
+            </view>
+          </view>
+        </view>
+        <view class='clearfix operatingTop'>
+          <view class='fl operatingLeft red'>
+            立即退房
+          </view>
+          <view class="fl operatingCenter grayFont">
+          共计20条未处理
+          </view>
+          <view class='fr operatingRight'>
+            <image href="javasript:;" 
+            src="../../asset/arrow.png" 
+            style="height:40rpx;width:40rpx"></image>
+          </view>
+        </view>
+        <view class='clearfix operatingTop'>
+          <view class='fl operatingLeft green'>
+            查看退房
+          </view>
+          <view class='fl operatingCenter grayFont'>
+          共计20条未处理
+          </view>
+          <view class='fr operatingRight'>
+            <image href="javasript:;" 
+            src="../../asset/arrow.png" 
+            style="height:40rpx;width:40rpx"></image>
+          </view>
+        </view>
+    </view> -->
+<!--***************客房部**********************  -->
+
+    <view class="operating">
+        <view class="clearfix operatingTop">
+          <view class='fl operatingLeft green'>
+            借用物品
+          </view>
+          <view class='fl operatingCenter grayFont'>
+          共计20条未处理 <view class="inlineBlock colorRed">有新消息</view>
+          </view>
+          <view class='fr operatingRight'>
+            <image href="javasript:;" 
+            src="../../asset/arrow.png" 
+            style="height:40rpx;width:40rpx"></image>
+          </view>
+        </view>
+        <view class="operatingDow">
+          <view class="clearfix operatingDowList">
+            <view class="fl width25">
+              6666
+            </view>
+            <view class="fl">
+              完成
+            </view>
+            <view class="fl">
+              <view class='colorRed'>有消费</view>
+            </view>
+            <view class="fr">
+                <button class="buttonFontsize yellowBtn fz20"
+                bindtap="lookDetail"
+                >查看</button>
+            </view>
+            <view class="fr downCenter grayFont">
+              3分钟前
+            </view>
+          </view>
+        </view>
+        <view class='clearfix operatingTop'>
+          <view class='fl operatingLeft purple'>
+            查房
+          </view>
+          <view class="fl operatingCenter grayFont">
+          共计20条未处理
+          </view>
+          <view class='fr operatingRight'>
+            <image href="javasript:;" 
+            src="../../asset/arrow.png" 
+            style="height:40rpx;width:40rpx"></image>
+          </view>
+        </view>
+        <view class='clearfix operatingTop'>
+          <view class='fl operatingLeft cyan'>
+            预约打扫
+          </view>
+          <view class='fl operatingCenter grayFont'>
+          共计20条未处理
+          </view>
+          <view class='fr operatingRight'>
+            <image href="javasript:;" 
+            src="../../asset/arrow.png" 
+            style="height:40rpx;width:40rpx"></image>
+          </view>
+        </view>
+        <view class='clearfix operatingTop'>
+          <view class='fl operatingLeft darkGray'>
+            预约查房
+          </view>
+          <view class='fl operatingCenter grayFont'>
+          共计20条未处理
+          </view>
+          <view class='fr operatingRight'>
+            <image href="javasript:;" 
+            src="../../asset/arrow.png" 
+            style="height:40rpx;width:40rpx"></image>
+          </view>
+        </view>
+
+
+
+    </view>
+
+
   </view>
 </view>

@@ -1,0 +1,88 @@
+<!--consump.wxml-->
+<view class="consump">
+  <!-- 1.预约看房 -->
+  <view  class="consumpTil blue" wx:if="{{status == 1}}">
+    预约退房
+    <view class="fr">10月1日（今天）08：30退房</view>
+  </view>
+  <!-- 2.立即退房 -->
+  <view  class="consumpTil red" wx:if="{{status == 2}}">
+    立即退房
+    <view class="fr">10月1日（今天）08：30退房</view>
+  </view>
+  <!--3退房查看  -->
+  <view  class="consumpTil green" wx:if="{{status == 3}}">
+    退房查看
+  </view>
+<!--***************************  -->
+  <view class="consumpBody">
+  
+  <!--基本信息  -->
+  <view class='userContent'>
+    <view>房号：</view>
+    <view>姓名：</view>
+  </view>
+<!--***************************  -->
+  <!-- 退房时间 -->
+  <!-- 1.预约看房 -->
+    <view class='userContent' wx:if="{{status == 3}}">
+      <view>
+        提交时间：
+      </view>
+      
+  <!-- 2.立即退房 -->
+     <view class="section">
+        <view class="flex-wrp">
+          <view class="flex-item left">
+            <image href="javasript:;" 
+            src="../../asset/job.png" 
+            style="height:50px;width:50px"></image>
+          </view>
+          <view class="flex-item right">
+            <view>
+            姓名：
+            </view>
+            <view>
+            工号：
+            </view>
+            <view>
+            部门：
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+<!--***************************  -->
+    <!-- 发票 -->
+    <view>
+    开票信息
+    </view>
+    <view class='userContent'>
+      <view>
+      公司名称：
+      </view>
+      <view>
+      开户行：
+      </view>
+      <view>
+      纳税人识别号：
+      </view>
+      <view>
+      公司地址：
+      </view>
+      <view>
+      电话：
+      </view>
+    </view>
+  </view>
+  <view class='userContent'>
+    <button class='buttonFontsize yellowBtn' wx:if="{{status == 1}}">接受</button>
+    <button class='buttonFontsize yellowBtn' wx:if="{{status == 2}}">接受</button>
+    <!--3.退房查看  -->
+     <button class='buttonFontsize yellowBtn' wx:if="{{status == 3}}">确认</button> 
+  </view>
+
+
+
+</view>

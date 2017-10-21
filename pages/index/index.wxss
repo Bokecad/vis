@@ -1,23 +1,24 @@
 /**index.wxss**/
+.home{
+  line-height: 50rpx;
+}
+.homeContent{
+  padding: 30rpx;
+}
 .userInfo{
-  width: 100%;
-  padding: 0 10px;
-  height: 70px;
-  /* background: red; */
-  margin-top:16px;
-  font-size: 14px;
-  /* border-bottom: 1px solid #000; */
+  padding-bottom: 10rpx;
+  font-size: 24rpx;
 }
 .userInfo .avatar,.content,.edit{
   float: left;
 }
 .userInfo .avatar{
-  width: 80px;
+  width: 20%;
   text-align: center;
 }
 /*userInfo content  */
 .userInfo .content{
-  width: 215px;
+  width: 60%;
 }
 .userInfo .content .left,.right{
   width: 50%;
@@ -25,11 +26,70 @@
 }
 
 .userInfo .edit{
-  width: 80px;
+  width: 20%;
+}
+/*公告  */
+.userInfo .announcement{
+  clear: both;
+  border-top:1px solid #000;
+  padding-top: 10px;
 }
 .userInfo .avatar image{
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  
 }
+
+
+.operatingTop{
+  
+  margin:10rpx 0;
+  background: #ddd;
+  padding:0 10rpx 0 0 ;
+}
+.operatingTop .operatingCenter,
+.operatingTop .operatingLeft{
+  
+  padding:10rpx 20rpx;
+}
+.operatingTop .operatingLeft{
+  width: 24%;
+  text-align: center;
+  box-sizing: border-box;
+  color:#fff;
+}
+.operatingTop .operatingCenter{
+  width: 60%;
+  overflow: hidden;
+  text-align: center;
+  font-size: 24rpx;
+}
+.operatingTop .operatingRight{
+  margin-top: 10rpx;
+}
+.operatingDowList{
+  margin:10rpx 0;
+  font-size: 24rpx;
+}
+.operatingDowList>view{
+  width: 20%;
+}
+.downCenter{
+  font-size: 24rpx;
+  text-align: right
+}
+.announcement{
+  padding:10rpx 0;
+  margin-bottom: 10rpx;
+}
+.announcementRight{
+  margin-left: 10rpx;
+  line-height: 40rpx;
+}
+.announcementLeft{
+  width:200rpx;
+  text-align:center;
+}
+
+
+

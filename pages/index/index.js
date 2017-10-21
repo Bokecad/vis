@@ -23,5 +23,17 @@ Page({
         userInfo:userInfo
       })
     })
+  },
+  lookDetail: function (event){
+    console.log(event)
+
+    wx.navigateTo({
+      url:"../consump/consump"
+    })
+
   }
 })
+// 点击查看
+// "pages/consump/consump"
+
+

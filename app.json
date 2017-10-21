@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/roomDivision/roomDivision",
     "pages/history/history",
     "pages/my/my"
   ],
@@ -16,7 +17,7 @@
         "selectedIconPath": "./asset/job_s.png"
       },
       {
-        "pagePath": "pages/history/history",
+        "pagePath": "pages/roomDivision/roomDivision",
         "text": "历史任务",
         "iconPath": "./asset/history.png",
         "selectedIconPath": "./asset/history_s.png"
