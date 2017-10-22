@@ -6,7 +6,8 @@ Page({
    */
   data: {
     // 状态：1预约退房 2立即退房 3查看消费
-    status:2
+    status:3,
+    consumption:0
 
   },
 
@@ -64,5 +65,17 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  noConsumption: function (event) {
+    this.setData({
+      consumption: 1
+    })
+  },
+  isConsumption: function (event) {
+    this.setData({
+      consumption: 2
+    })
   }
+
 })

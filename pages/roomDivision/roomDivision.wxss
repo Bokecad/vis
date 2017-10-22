@@ -26,9 +26,6 @@
   margin:10rpx 0;
   font-size: 24rpx;
 }
-.flex{
-  flex:1;
-}
 .countIpt{
   display: inline-block;
   width: 40%;

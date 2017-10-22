@@ -12,6 +12,9 @@ page{
   box-sizing: border-box;
   font-size: 14px;
 } 
+image{
+  vertical-align: middle;
+}
 /* 按钮字体初始化 */
 .buttonFontsize{
   font-size: 30rpx;
@@ -43,6 +46,12 @@ page{
     flex-wrap: nowrap;
     overflow: hidden;
 }
+
+.flex{
+  flex:1;
+}
+
+
 
 .alignCenter{
   text-align: center;
@@ -77,7 +86,11 @@ page{
 .darkGray{
   background:#27323b;
 }
-
+/*黄绿色  */
+.greenyellow{
+  
+  color: greenyellow;
+}
 
 
 
@@ -95,7 +108,13 @@ page{
   color:#666;
 }
 
-
+.signTxt{
+  font-size: 24rpx;
+  color: greenyellow;
+  display: inline-block;
+  padding:5rpx 10rpx;
+  border: 1px solid greenyellow;
+}
 
 
 

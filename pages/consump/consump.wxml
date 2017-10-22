@@ -2,17 +2,19 @@
 <view class="consump">
   <!-- 1.预约看房 -->
   <view  class="consumpTil blue" wx:if="{{status == 1}}">
-    预约退房
-    <view class="fr">10月1日（今天）08：30退房</view>
+    预约退房<view class="signTxt"  wx:if="{{consumption!=0}}">已接受</view>
+    <view class="inlineBlock greenyellow fz20"  wx:if="{{consumption!=0}}">10月1日08：30接受</view>
+    <view class="fr fz20" >10月1日08：30退房</view>
   </view>
   <!-- 2.立即退房 -->
   <view  class="consumpTil red" wx:if="{{status == 2}}">
-    立即退房
-    <view class="fr">10月1日（今天）08：30退房</view>
+    立即退房<view class="signTxt"  wx:if="{{consumption!=0}}">已接受</view>
+    <view class="inlineBlock greenyellow fz20"  wx:if="{{consumption!=0}}">10月1日08：30接受</view>
+    <view class="fr fz20">10月1日08：30退房</view>
   </view>
   <!--3退房查看  -->
   <view  class="consumpTil green" wx:if="{{status == 3}}">
-    退房查看
+    退房查看<view class="signTxt"  wx:if="{{consumption!=0}}">已确认</view>
   </view>
 <!--***************************  -->
   <view class="consumpBody">
@@ -31,11 +33,11 @@
       </view>
       
   <!-- 2.立即退房 -->
-     <view class="section">
+     <view class="section" >
         <view class="flex-wrp">
           <view class="flex-item left">
             <image href="javasript:;" 
-            src="../../asset/job.png" 
+            src="../../asset/serviceImg.jpg" 
             style="height:50px;width:50px"></image>
           </view>
           <view class="flex-item right">
@@ -55,32 +57,88 @@
 
 <!--***************************  -->
     <!-- 发票 -->
-    <view>
-    开票信息
+    <view wx:if="{{status != 3}}" >
+        <view>
+        开票信息
+        </view>
+        <view class='userContent'>
+          <view>
+          公司名称：
+          </view>
+          <view>
+          开户行：
+          </view>
+          <view>
+          纳税人识别号：
+          </view>
+          <view>
+          公司地址：
+          </view>
+          <view>
+          电话：
+          </view>
+        </view>
     </view>
-    <view class='userContent'>
-      <view>
-      公司名称：
-      </view>
-      <view>
-      开户行：
-      </view>
-      <view>
-      纳税人识别号：
-      </view>
-      <view>
-      公司地址：
-      </view>
-      <view>
-      电话：
-      </view>
+<!--*****************************  -->
+      <view  wx:if="{{status == 3}}">
+        <view>
+          物品清单
+          <view class="inlineBlock fz20 grayFont" >（有消费的，明细如下）</view>
+          
+          <view class="f_yellow fr">
+            <image href="javasript:;" 
+            src="../../asset/notice1.png" 
+            style="height:30rpx;width:30rpx"></image>
+            听语音播报
+        </view>
+        </view>
+        <view class="flex-wrp alignCenter">
+          <view class="flex-item flex ">
+            物品
+          </view>
+          <view class="flex-item flex">
+            数量
+          </view>
+        </view>
+        <view>
+          <view class="flex-wrp  inventory alignCenter">
+            <view class="flex-item flex ">
+              物品
+            </view>
+            <view class="flex-item flex">
+              10双
+            </view>
+          </view>
+        </view>
+    
+
+
+
+
+    
     </view>
   </view>
-  <view class='userContent'>
-    <button class='buttonFontsize yellowBtn' wx:if="{{status == 1}}">接受</button>
-    <button class='buttonFontsize yellowBtn' wx:if="{{status == 2}}">接受</button>
-    <!--3.退房查看  -->
-     <button class='buttonFontsize yellowBtn' wx:if="{{status == 3}}">确认</button> 
+  <!--******************按钮***************************  -->
+    <view class='userContent'>
+    <view wx:if="{{status == 1}}">
+      <button class='buttonFontsize yellowBtn' 
+      wx:if="{{consumption == 0}}"
+      bindtap="isConsumption"
+      >接受</button>
+    </view>
+    <view wx:if="{{status == 2}}">
+      <button class='buttonFontsize yellowBtn'
+        wx:if="{{consumption == 0}}"
+        bindtap="isConsumption"
+      >接受</button>
+    </view>
+      
+      <!--3.退房查看  -->
+    <view wx:if="{{status == 3}}">
+      <button class='buttonFontsize yellowBtn'
+      wx:if="{{consumption == 0}}" 
+      bindtap="isConsumption">确认</button> 
+    </view>
   </view>
 
 

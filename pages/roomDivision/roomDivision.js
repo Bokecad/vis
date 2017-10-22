@@ -5,9 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    // 状态：1预约退房 2立即退房 3查看消费
-    status:2
-
+      // 状态：
+      status: 3,
+      // 消费情况 1 未消费 2有消费
+      consumption: 0
   },
 
   /**
@@ -29,7 +30,10 @@ Page({
    */
   onShow: function () {
 
+
   },
+
+
 
   /**
    * 生命周期函数--监听页面隐藏
@@ -42,7 +46,6 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
   },
 
   /**
@@ -64,5 +67,15 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  noConsumption: function (event) {
+    this.setData({
+      consumption: 1
+    })
+  },
+  isConsumption: function (event){
+    this.setData({
+      consumption:2
+    })
   }
 })

@@ -2,13 +2,15 @@
 <view class="consump">
   <!-- 1.借用物品 -->
   <view  class="consumpTil green" wx:if="{{status == 1}}">
-    借用物品
-    <view class="fr fz20">10月1日（今天）08：30退房</view>
+    借用物品<view class="signTxt"  wx:if="{{consumption!=0}}">已接受</view>
+    <view class="fr fz20"  wx:if="{{consumption!=0}}">10月1日08：30接受</view>
   </view>
   <!-- 2.查房查看 -->
   <view  class="consumpTil purple" wx:if="{{status == 2}}">
-    查房查看
-    <view class="fr fz20">10月1日（今天）08：30退房</view>
+    查房查看 <view class="signTxt"  wx:if="{{consumption!=0}}">完成</view>
+    <view class="fr fz20"  wx:if="{{consumption!=0}}" >
+    10月1日08：30完成
+    </view>
   </view>
   <!--3预约扫房  -->
   <view  class="consumpTil cyan" wx:if="{{status == 3}}">
@@ -35,54 +37,96 @@
     </view>
 <!--***************************  -->
     <!-- 物品清单 -->
-    <view>
-      <view>
-        物品清单
-        <view class="f_yellow fr">
-          <image href="javasript:;" 
-          src="../../asset/notice1.png" 
-          style="height:30rpx;width:30rpx"></image>
-          听语音播报
+    <!-- 无消费 -->
+    <view wx:if="{{status == 2}}">
+      <view class="" wx:if="{{consumption==1}}">
+      消费状况：未消费
       </view>
-      </view>
-      <view class="flex-wrp alignCenter">
-        <view class="flex-item flex ">
-          物品
+      <!-- 有消费 -->
+      <view wx:if="{{consumption==2}}">
+        <view>
+          物品清单
+          <view class="f_yellow fr">
+            <image href="javasript:;" 
+            src="../../asset/notice1.png" 
+            style="height:30rpx;width:30rpx"></image>
+            听语音播报
         </view>
-        <view class="flex-item flex">
-          数量
         </view>
-        <view class="flex-item flex">
-          操作
-        </view>
-      </view>
-      <view>
-        <view class="flex-wrp  inventory alignCenter">
+        <view class="flex-wrp alignCenter">
           <view class="flex-item flex ">
             物品
           </view>
           <view class="flex-item flex">
-            <view class="reduce">-</view>
-            <input class="countIpt"></input>
-            <view class="reduce">+</view>
-            
+            数量
           </view>
           <view class="flex-item flex">
-              <button type="warn" 
-              class="buttonFontsize fz20"
-              style="width:50%;"
-              >删除</button>
+            操作
           </view>
         </view>
+
+        <view>
+          <view class="flex-wrp  inventory alignCenter">
+            <view class="flex-item flex ">
+              物品
+            </view>
+            <view class="flex-item flex">
+              <view class="reduce">-</view>
+              <input class="countIpt"></input>
+              <view class="reduce">+</view>
+              
+            </view>
+            <view class="flex-item flex">
+                <button type="warn" 
+                class="buttonFontsize fz20"
+                style="width:50%;"
+                >删除</button>
+            </view>
+          </view>
+        </view>
+        <view class='fz24'>更多信息</view>
       </view>
     </view>
+    
   </view>
-  <view class='userContent'>
-    <button class='buttonFontsize yellowBtn' wx:if="{{status == 1}}">接受</button>
-    <button class='buttonFontsize yellowBtn' wx:if="{{status == 2}}">接受</button>
+   <view class='userContent'>
+   <!-- 借用物品 -->
+    <button class='buttonFontsize yellowBtn' bindtap="noConsumption" wx:if="{{status == 1}}">接受任务</button>
+
+    <view wx:if="{{status == 2}}" class="alignCenter">
+      <button 
+        class='buttonFontsize  inlineBlock' 
+        style="width:40%;margin-right:10rpx;"
+        bindtap="noConsumption" wx:if="{{consumption==0}}
+      >
+        无消费</button>
+      <button 
+      class='buttonFontsize yellowBtn inlineBlock' 
+      style="width:40%;"
+      bindtap="isConsumption" wx:if="{{consumption==0}}
+      >有消费</button>
+      
+      <button 
+      class='buttonFontsize yellowBtn inlineBlock' 
+      style="width:40%;" wx:if="{{consumption==2}}"
+      >
+          <image href="javasript:;" 
+          src="../../asset/voice.png" 
+          style="height:50rpx;width:50rpx;"
+          ></image>
+          语音录音</button>
+      <button 
+      class='buttonFontsize  inlineBlock' 
+      style="width:40%;"
+      bindtap="isConsumption" wx:if="{{consumption==2}}"
+      >完成</button>
+
+
+      
+    </view>
     <!--3.退房查看  -->
      <button class='buttonFontsize yellowBtn' wx:if="{{status == 3}}">确认</button> 
-  </view>
+  </view> 
 
 
 
